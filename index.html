@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MMS Play – Choose Your Plan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .bg-overlay {
+      background: url('https://cdn.pixabay.com/photo/2020/05/22/06/57/gamepad-5203392_1280.jpg') no-repeat center center;
+      background-size: cover;
+      opacity: 0.4;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      filter: blur(2px);
+    }
+
+    .logo {
+      margin-top: 20px;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    .main-image {
+      width: 100%;
+      max-width: 600px;
+      margin: 30px auto;
+      display: block;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+    }
+
+    h1 {
+      margin-top: 10px;
+      font-size: 2rem;
+    }
+
+    p {
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-overlay"></div>
+
+  <div class="logo">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Media_Markt_Logo.svg/512px-Media_Markt_Logo.svg.png" alt="MediaMarkt Logo">
+  </div>
+  <h1>MMS Play Subscription</h1>
+  <p>Click directly on “Join Now”</p>
+
+  <img src="mms-play-bundle.png" usemap="#mmsmap" alt="MMS Play Plans" class="main-image">
+
+  <map name="mmsmap">
+    <!-- Button area: x1,y1,x2,y2 (fine-tuned for 600px image width) -->
+    <area shape="rect" coords="120,400,250,445" href="checkout-core.html" alt="Core Plan">
+    <area shape="rect" coords="350,400,480,445" href="checkout-pro.html" alt="Pro Plan">
+  </map>
+</body>
+</html>
