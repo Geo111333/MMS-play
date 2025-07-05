@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MMS Play – Level Up Your Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #0e0e0e;
+      color: #fff;
+    }
+
+    header {
+      background-color: #e60000;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav {
+      background-color: #1a1a1a;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 15px;
+      font-size: 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #e60000;
+    }
+
+    .hero {
+      background: url('https://wallpaperaccess.com/full/4266714.jpg') no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 10px #000;
+      max-width: 90%;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .plans {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
+    .plan {
+      background-color: #1f1f1f;
+      border: 2px solid #e60000;
+      border-radius: 10px;
+      padding: 25px;
+      flex: 1;
+      min-width: 280px;
+      max-width: 400px;
+    }
+
+    .plan h2 {
+      font-size: 1.8rem;
+      color: #e60000;
+      margin-bottom: 10px;
+    }
+
+    .plan ul {
+      margin: 15px 0;
+      padding-left: 20px;
+    }
+
+    .plan ul li {
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background-color: #e60000;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #ff1a1a;
+    }
+
+    .bundle {
+      text-align: center;
+    }
+
+    .bundle img {
+      width: 90%;
+      max-width: 700px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1a1a1a;
+      color: #888;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>MMS Play</header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#features">Features</a>
+    <a href="#join">Join</a>
+  </nav>
+
+  <section class="hero" id="home">
+    <h1>Level Up with MMS Play</h1>
+  </section>
+
+  <div class="container" id="features">
+    <div class="plans">
+      <div class="plan">
+        <h2>MMS Play Core</h2>
+        <ul>
+          <li>Access to subscriber-only tournaments</li>
+          <li>Discord basic access</li>
+          <li>Standard giveaways</li>
+          <li>Beta invites for early access</li>
+          <li>Pay-per-visit gaming lounge</li>
+          <li>Lease up to 100€ in gear</li>
+          <li>Limited stream/event access</li>
+        </ul>
+        <div class="price">5,99 EUR</div>
+        <a href="mailto:your@email.com?subject=Join MMS Play Core" class="cta-button">Join Now</a>
+      </div>
+
+      <div class="plan">
+        <h2>MMS Play Pro</h2>
+        <ul>
+          <li>+2 free tournaments/year</li>
+          <li>VIP Discord access</li>
+          <li>Exclusive giveaways</li>
+          <li>Early access to hardware & demos</li>
+          <li>2x free lounge entries/month</li>
+          <li>Lease up to 1000€ in gear</li>
+          <li>EA Play or Ubisoft+ included</li>
+        </ul>
+        <div class="price">12,99 EUR</div>
+        <a href="mailto:your@email.com?subject=Join MMS Play Pro" class="cta-button">Join Now</a>
+      </div>
+    </div>
+
+    <div class="bundle" id="join">
+      <h2>Included Hardware Bundle</h2>
+      <img src="mms-play-bundle.png" alt="MMS Play Bundle">
+    </div>
+  </div>
+
+  <footer>© 2025 MMS Play / MediaMarkt Saturn – Concept Demo</footer>
+</body>
+</html>
