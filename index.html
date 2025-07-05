@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MMS Play – Click Zones</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .logo {
+      margin-top: 20px;
+    }
+    .logo img {
+      height: 60px;
+    }
+    .container {
+      position: relative;
+      width: 90%;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+    .container img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+    }
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: url('https://cdn.pixabay.com/photo/2020/05/22/06/57/gamepad-5203392_1280.jpg') no-repeat center center;
+      background-size: cover;
+      filter: blur(3px);
+      opacity: 0.25;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <div class="background"></div>
+
+  <div class="logo">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Media_Markt_Logo.svg/512px-Media_Markt_Logo.svg.png" alt="MediaMarkt Logo">
+  </div>
+
+  <h1>MMS Play Subscription</h1>
+  <p>Click exactly on the red Join Now buttons</p>
+
+  <div class="container">
+    <img id="bundle" src="mms-play-bundle.png" alt="MMS Play Bundle">
+  </div>
+
+  <script>
+    document.getElementById("bundle").addEventListener("click", function(event) {
+      const img = this;
+      const rect = img.getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+      const scaleX = img.naturalWidth / img.clientWidth;
+      const scaleY = img.naturalHeight / img.clientHeight;
+      const actualX = x * scaleX;
+      const actualY = y * scaleY;
+
+      // Debug: console.log("Clicked:", actualX, actualY);
+
+      // Join Now buttons - based on the raw image coordinates
+      const coreBtn = { x1: 70, y1: 390, x2: 225, y2: 435 };
+      const proBtn = { x1: 360, y1: 390, x2: 515, y2: 435 };
+
+      if (
+        actualX >= coreBtn.x1 && actualX <= coreBtn.x2 &&
+        actualY >= coreBtn.y1 && actualY <= coreBtn.y2
+      ) {
+        window.location.href = "checkout-core.html";
+      } else if (
+        actualX >= proBtn.x1 && actualX <= proBtn.x2 &&
+        actualY >= proBtn.y1 && actualY <= proBtn.y2
+      ) {
+        window.location.href = "checkout-pro.html";
+      }
+    });
+  </script>
+</body>
+</html>
